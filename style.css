@@ -1,4 +1,13 @@
 /* Your Styles */
+/* Load Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+/* Style Tile with CSS Variables */
+:root {
+    --color1 : #848484;
+    --color2 : #b84040;
+    --font1 : 'Fredoka', sans-serif;
+}
 
 /* diagnostic styling. remove when done */
 * {
@@ -8,6 +17,7 @@
 /* Layout with css grid */
 body {
     display: grid;
+    background: var(--color1);
 }
 
 main {
@@ -20,17 +30,31 @@ main {
 }
 
 figure {
- margin: 0;
- /* set your width */
- width: 33%;
+    background: var(--color2);
+    padding: 30px;
+    border-radius: 5px;
+
+ /* set YOUR margin */
+ margin: 10px;
+ /* set YOUR width of YOUR thumbnails */
+ width: 300px;
 }
   
 /* Backdrop for modal overlay */
 ::backdrop {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(184, 64, 64, 0.808);
 }
 
 /* Animation */
 dialog {
-    animation: fadeIn 1s;
+    border: none;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+
+    animation: tada 1s;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
 }
